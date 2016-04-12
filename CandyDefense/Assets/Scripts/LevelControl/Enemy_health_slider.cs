@@ -2,13 +2,15 @@
 using UnityEngine.UI;
 using System.Collections;
 using Enemy;
-public class Enemy_health_slider : MonoBehaviour {
+
+public class Enemy_health_slider : MonoBehaviour
+{
 
 	public Slider EnemyBar;
 
 	public Camera main;
 	public Transform Enemy_for_this;
-	public Vector3 vec;	
+	public Vector3 vec;
 	public GameObject Bar;
 	public GameObject[] Dinos;
 	public Object[] Bars;
@@ -16,41 +18,39 @@ public class Enemy_health_slider : MonoBehaviour {
 	public Enemy_Coll round_accessor;
 
 	// Use this for initialization
-	void Start () {
-
-		transform.Translate(1000, 0, 0);
-		Dinos = GameObject.FindGameObjectsWithTag("Enemy");
-		Enemy_for_this = Dinos[Dinos.Length - 1].transform;
-		vec = Enemy_for_this.InverseTransformDirection(Enemy_for_this.position.x,Enemy_for_this.position.y + -.25f, -6 );
+	void Start ()
+	{
+		transform.Translate (1000, 0, 0);
+		Dinos = GameObject.FindGameObjectsWithTag ("Enemy");
+		Enemy_for_this = Dinos [Dinos.Length - 1].transform;
+		vec = Enemy_for_this.InverseTransformDirection (Enemy_for_this.position.x, Enemy_for_this.position.y + -.25f, -6);
 		transform.position = vec;
 
 		round_accessor = Enemy_for_this.GetComponent<Enemy_Coll> ();
 		//Bars = FindObjectsOfType(typeof (Slider));
-		EnemyBar = FindObjectOfType(typeof (Slider)) as Slider;
+		EnemyBar = FindObjectOfType (typeof(Slider)) as Slider;
 		EnemyBar.maxValue = round_accessor.hlth;
-	
-
 	}
 	
 	// Update is called once per frame
-	void Update () {
-
-		transform.localScale = new Vector3(1f,1f,1f);
-		vec = Enemy_for_this.InverseTransformDirection(Enemy_for_this.position.x,Enemy_for_this.position.y + -.25f, -6 );
+	void Update ()
+	{
+		transform.localScale = new Vector3 (1f, 1f, 1f);
+		vec = Enemy_for_this.InverseTransformDirection (Enemy_for_this.position.x, Enemy_for_this.position.y + -.25f, -6);
 		transform.position = vec;
 
 		EnemyBar.value = Mathf.MoveTowards (EnemyBar.value, round_accessor.hlth, 1f);
-		if (round_accessor.hlth <= 0) 
+		if (round_accessor.hlth <= 0)
 		{
-			Destroy(gameObject);
+			Destroy (gameObject);
 		}
-		}
-	void LateUpdate () {
-		vec = Enemy_for_this.InverseTransformDirection(Enemy_for_this.position.x,Enemy_for_this.position.y + -.25f, -6 );
-		transform.position = vec;
-		transform.SetParent(GameObject.Find("Canvas").transform, true);
-		transform.localScale = new Vector3(1f,1f,1f);
 	}
 
-	}	
-
+	void LateUpdate ()
+	{
+		vec = Enemy_for_this.InverseTransformDirection (Enemy_for_this.position.x, Enemy_for_this.position.y + -.25f, -6);
+		transform.position = vec;
+		transform.SetParent (GameObject.Find ("Canvas").transform, true);
+		transform.localScale = new Vector3 (1f, 1f, 1f);
+	}
+}

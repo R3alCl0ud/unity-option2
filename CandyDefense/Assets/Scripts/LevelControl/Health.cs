@@ -12,7 +12,8 @@ public class Health : MonoBehaviour
 	public LevelControl round_accessor;
 
 
-	void Start () {
+	void Start () 
+	{
 		round_level = GameObject.Find ("spawner");
 		round_accessor = round_level.GetComponent<LevelControl> ();
 	}
