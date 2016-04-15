@@ -52,8 +52,7 @@ namespace Store
 		{
 			Vector3 vec = main.ScreenToWorldPoint (Input.mousePosition);
 		
-			transform.position = vec;
-							
+			transform.position = vec;						
 
 			if (round_accessor.current_enemy_amount > 0)
 			{
