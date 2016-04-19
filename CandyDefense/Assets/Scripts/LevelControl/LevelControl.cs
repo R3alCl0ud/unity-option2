@@ -173,6 +173,22 @@ namespace Level
 						
 			current_enemy_amount = enemies.Length;
 
+			if (pause == false)
+			{
+				enemies = GameObject.FindGameObjectsWithTag ("Enemy");
+				Turrets = GameObject.FindGameObjectsWithTag ("Turret");
+				Bomber = GameObject.FindGameObjectsWithTag ("Bomber");
+				FlameThrowers = GameObject.FindGameObjectsWithTag ("Thrower");
+				Bars = GameObject.FindGameObjectsWithTag ("Bar");
+				FireShots = GameObject.FindGameObjectsWithTag ("Fire");
+				Projectiles = GameObject.FindGameObjectsWithTag ("Projectile");
+				Ices = GameObject.FindGameObjectsWithTag ("Ice");
+				FreezeRay = GameObject.FindGameObjectsWithTag ("Freeze");
+				Bombs = GameObject.FindGameObjectsWithTag ("Bomb");
+				Snipers = GameObject.FindGameObjectsWithTag ("Sniper");
+			}
+
+
 			if (Input.GetKeyDown ("escape") && pause == false)
 			{							
 				Instantiate (Pause, transform.position, transform.rotation);	
@@ -183,6 +199,7 @@ namespace Level
 				}
 				foreach (GameObject Enem in enemies)
 				{
+					enemies = GameObject.FindGameObjectsWithTag ("Enemy");
 					Enem.SetActive (false);
 				}
 				foreach (GameObject bArs in Bars)
@@ -255,20 +272,7 @@ namespace Level
 				GameObject PauseScreen = GameObject.Find ("Pause Screen(Clone)");
 				Destroy (PauseScreen);
 			}
-			if (pause == false)
-			{
-				enemies = GameObject.FindGameObjectsWithTag ("Enemy");
-				Turrets = GameObject.FindGameObjectsWithTag ("Turret");
-				Bomber = GameObject.FindGameObjectsWithTag ("Bomber");
-				FlameThrowers = GameObject.FindGameObjectsWithTag ("Thrower");
-				Bars = GameObject.FindGameObjectsWithTag ("Bar");
-				FireShots = GameObject.FindGameObjectsWithTag ("Fire");
-				Projectiles = GameObject.FindGameObjectsWithTag ("Projectile");
-				Ices = GameObject.FindGameObjectsWithTag ("Ice");
-				FreezeRay = GameObject.FindGameObjectsWithTag ("Freeze");
-				Bombs = GameObject.FindGameObjectsWithTag ("Bomb");
-				Snipers = GameObject.FindGameObjectsWithTag ("Sniper");
-			}
+
 
 			pauseY = (Screen.height / 2 - 100);
 			pauseX = (Screen.width / 2 - 200);

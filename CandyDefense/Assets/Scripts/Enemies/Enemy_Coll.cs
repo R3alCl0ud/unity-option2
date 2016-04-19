@@ -45,19 +45,17 @@ namespace Enemy
 		{
 			if (hlth <= 0)
 			{
-				storecontrol.Coins = storecontrol.Coins + 10;
 				if (this.gameObject.name == "Sanic_Raptor(Clone)")
 				{
-					storecontrol.Coins = storecontrol.Coins + 40;
+					storecontrol.Coins = storecontrol.Coins + (Mathf.RoundToInt (Random.value * (40 - 1 + 1)) + 1);
 				} else if (this.gameObject.name == "Dino_enemy(Clone)")
 				{
-					storecontrol.Coins = storecontrol.Coins + 10;
+					storecontrol.Coins = storecontrol.Coins + (Mathf.RoundToInt (Random.value * (10 - 1 + 1)) + 1);
 				} else if (this.gameObject.name == "Salid_snake(Clone)")
 				{
-					storecontrol.Coins = storecontrol.Coins + 60;
+					storecontrol.Coins = storecontrol.Coins + (Mathf.RoundToInt (Random.value * (40 - 1 + 1)) + 1);
 				}
 				Destroy (gameObject);
-
 			}
 			if (Froze == true)
 			{
@@ -106,7 +104,7 @@ namespace Enemy
 			if (coll.gameObject.tag == "Fire")
 			{
 				Destroy (coll.gameObject);
-				hlth -= 0.10f;
+				hlth -= 0.05f;
 
 			}
 		}
