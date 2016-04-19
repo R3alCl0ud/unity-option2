@@ -1,27 +1,31 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-
-namespace math 
+public class mathGen : MonoBehaviour 
 {
-	public class mathGen : MonoBehaviour 
+
+	// Use this for initialization
+	void Start () 
 	{
+		//Random number between 1 and 100
+		if (easy)
+		{
+			int AddNum = Mathf.RoundToInt (Random.value * (12 - 1 + 1)) + 1;
+		} 
+		else if (medium)
+		{
+			int AddNum = Mathf.RoundToInt (Random.value * (12 - 1 + 1)) + 1;
+		} 
+		else if (hard)
+		{
+			int AddNum = Mathf.RoundToInt (Random.value * (12 - 1 + 1)) + 1;
+		}
 
-		// Use this for initialization
-		void Start () 
-		{
-
-		}
+	}
 	
-		// Update is called once per frame
-		void Update () 
-		{
+	// Update is called once per frame
+	void Update () 
+	{
 	
-		}
-		void NewProb ()
-		{
-			//Random number between 1 and 100
-			int AddNum = Mathf.RoundToInt (Random.value * (100 - 1 + 1)) + 1;
-		}
 	}
 }

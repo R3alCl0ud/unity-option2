@@ -1,0 +1,17 @@
+/Users/compscience/Documents/unity-option2/CandyDefense/Temp/bin/Debug/UnityEngine.dll
+/Users/compscience/Documents/unity-option2/CandyDefense/Temp/bin/Debug/UnityEditor.dll
+/Users/compscience/Documents/unity-option2/CandyDefense/Temp/bin/Debug/UnityEngine.UI.dll
+/Users/compscience/Documents/unity-option2/CandyDefense/Temp/bin/Debug/UnityEngine.Networking.dll
+/Users/compscience/Documents/unity-option2/CandyDefense/Temp/bin/Debug/Mono.Cecil.dll
+/Users/compscience/Documents/unity-option2/CandyDefense/Temp/bin/Debug/Unity.SerializationLogic.dll
+/Users/compscience/Documents/unity-option2/CandyDefense/Temp/bin/Debug/Unity.DataContract.dll
+/Users/compscience/Documents/unity-option2/CandyDefense/Temp/bin/Debug/ICSharpCode.NRefactory.dll
+/Users/compscience/Documents/unity-option2/CandyDefense/Temp/bin/Debug/Unity.UNetWeaver.dll
+/Users/compscience/Documents/unity-option2/CandyDefense/Temp/bin/Debug/Unity.UNetWeaver.dll.mdb
+/Users/compscience/Documents/unity-option2/CandyDefense/Temp/bin/Debug/Unity.CecilTools.dll
+/Users/compscience/Documents/unity-option2/CandyDefense/Temp/bin/Debug/Mono.Cecil.Pdb.dll
+/Users/compscience/Documents/unity-option2/CandyDefense/Temp/bin/Debug/Mono.Cecil.Mdb.dll
+/Users/compscience/Documents/unity-option2/CandyDefense/Temp/bin/Debug/Assembly-CSharp.dll.mdb
+/Users/compscience/Documents/unity-option2/CandyDefense/Temp/bin/Debug/Assembly-CSharp.dll
+/Users/compscience/Documents/unity-option2/CandyDefense/obj/Debug/Assembly-CSharp.dll
+/Users/compscience/Documents/unity-option2/CandyDefense/obj/Debug/Assembly-CSharp.dll.mdb
