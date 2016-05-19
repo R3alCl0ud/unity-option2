@@ -26,7 +26,7 @@ namespace Level
 		public GameObject[] FreezeRay;
 		public GameObject Raptor;
 		public GameObject SanicRaptor;
-		public GameObject DinoFuck;
+		public GameObject DinoF;
 		public GameObject Bar;
 		public Toggle SpeedTog;
 		public GameObject Pause;
@@ -40,6 +40,10 @@ namespace Level
 		public bool roundIsOver;	//are we inbetween rounds?
 		public bool pause = false;
 		public bool Called = true;
+		//Difficulty
+		public bool easy = false;
+		public bool medium = false;
+		public bool hard = false;
 
 		//integers
 		public int wave;
@@ -357,7 +361,7 @@ namespace Level
 						}
 						if (wave >= 7 && currentEnemies < maxEnemies)
 						{
-							Instantiate (DinoFuck, transform.position, transform.rotation);
+							Instantiate (DinoF, transform.position, transform.rotation);
 							yield return new WaitForSeconds (0.05f);
 							Instantiate (Bar, transform.position, transform.rotation);
 							yield return new WaitForSeconds (SpawnRate / 2);

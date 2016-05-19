@@ -1,7 +1,9 @@
-﻿using UnityEngine;
+﻿
+using UnityEngine;
 using System.Collections;
 
-public class mathGen : MonoBehaviour 
+
+ public class mathGen : MonoBehaviour 
 {
 	int a;
 	int AddNum ();
@@ -14,6 +16,7 @@ public class mathGen : MonoBehaviour
 		int AddNum1 = AddNum ();
 		int AddNum2 = AddNum ();
 
+		//Pass bool made in LevelControl
 		if (easy)
 		{
 			a = 20;
@@ -33,9 +36,6 @@ public class mathGen : MonoBehaviour
 				sym();
 				break;
 			}
-
-
-
 
 
 		} 

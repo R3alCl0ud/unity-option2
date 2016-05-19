@@ -39,4 +39,14 @@ public class LoadingScreen : MonoBehaviour
 		}
 		Application.LoadLevel ("Forest");
 	}
+
+
+	//Code choice buttons. IEnumerator or normal function?
+
+		//Easy button
+
+		//Medium button
+
+		//Hard button
+			// connect to mathGen
 }
